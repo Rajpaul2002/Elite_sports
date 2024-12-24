@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Registration Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        .content {
+            display: none;
+        }
+        .active-section {
+            display: block;
+        }
+        body {
+            background-color: #b9f6f3 !important;
+        }
+       
+    </style>
+    
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color:#b9f6f3 !important">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="./photos/elite_sports.png" alt="Elite Sports">
+            </a>
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" id="personalDetailsLink" href="#">Personal Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="playerDetailsLink" href="#">Player Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="paymentDetailsLink" href="#">Payment Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+   
+    <div class="container mt-5">
+        <!-- Personal Details Section -->
+        <div id="personalDetails" class="content active-section">
+            <h2>Personal Details</h2>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-5">
+                  <label for="validationCustom01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validationCustom01"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="validationCustom02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="validationCustom02" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="validationCustom02" style="width: 100px;" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="validationCustom02" class="form-label">CricHeroes Mobile Number</label>
+                    <input type="text" class="form-control" id="validationCustom02" style="width: 200px;" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">City</label>
+                  <input type="text" class="form-control" id="validationCustom03"  required>
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">State</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom05" class="form-label">Pin Code</label>
+                  <input type="text" class="form-control" id="validationCustom05"   required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="mb-3">
+                        <label for="paymentReceipt" class="form-label mb-3">Upload your Photo</label>
+                        <input type="file" class="form-control" id="paymentReceipt" accept=".jpg,.png,.pdf">
+                </div>
+                    
+               
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+              </form>
+             
+        </div>
+
+        <!-- Player Details Section -->
+        <div id="playerDetails" class="content">
+            <h2>Player Details</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="playerRole" class="form-label">Player Role</label>
+                    <input type="text" class="form-control" id="playerRole" placeholder="Enter Player Role">
+                </div>
+                <div class="mb-3">
+                    <label for="battingStyle" class="form-label">Batting Style</label>
+                    <select class="form-control" id="battingStyle">
+                        <option value="right-hand">Right-Hand Batsman</option>
+                        <option value="left-hand">Left-Hand Batsman</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="bowlingStyle" class="form-label">Bowling Style</label>
+                    <select class="form-control" id="bowlingStyle">
+                        <option value="right-hand">Right-Hand Bowler</option>
+                        <option value="left-hand">Left-Hand Bowler</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="jerseySize" class="form-label">Jersey Size</label>
+                    <input type="text" class="form-control" id="jerseySize" placeholder="Enter Jersey Size">
+                </div>
+                <div class="mb-3">
+                    <label for="jerseyNumber" class="form-label">Jersey Number</label>
+                    <input type="number" class="form-control" id="jerseyNumber" placeholder="Enter Jersey Number">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- Payment Details Section -->
+        <div id="paymentDetails" class="content">
+            <h2>Payment Details</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="paymentReceipt" class="form-label mb-3">Payment Receipt</label>
+                    <input type="file" class="form-control" id="paymentReceipt" accept=".jpg,.png,.pdf">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle navbar navigation
+        document.getElementById("personalDetailsLink").addEventListener("click", function () {
+            showSection("personalDetails");
+        });
+
+        document.getElementById("playerDetailsLink").addEventListener("click", function () {
+            showSection("playerDetails");
+        });
+
+        document.getElementById("paymentDetailsLink").addEventListener("click", function () {
+            showSection("paymentDetails");
+        });
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll(".content");
+            sections.forEach(section => section.classList.remove("active-section"));
+            document.getElementById(sectionId).classList.add("active-section");
+        }
+    </script>
+</body>
+</html>
